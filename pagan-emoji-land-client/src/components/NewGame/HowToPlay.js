@@ -12,7 +12,7 @@ export default class HowToPlay extends Component {
                         Object:
                     </label>
                     <br />
-                    Leave the most impact before reaching the New Moon during the Winter Solstice.
+                    Leave the most impact before passing the New Moon during the Winter Solstice.
                 </p>
                 <p>
                     <label>
@@ -49,31 +49,27 @@ export default class HowToPlay extends Component {
                     Move ahead to the next space that matches the moon phase.
                 </p>
                 <p>
-                    <ul>
-                        <li>♈ Aries ♈</li>                
-                        <li>♊ Gemini ♊</li>
-                        <li>♋ Cancer ♋</li>                    
-                        <li>♎ Libra ♎</li>                       
-                        <li>☿ Mercury ☿</li>                        
-                        <li>♃ Jupiter ♃</li>
-                        <li>♄ Saturn ♄</li>                      
-                        <li>♆ Neptune ♆</li>
-                        <li>☉ Sun ☉</li>                       
-                    </ul>                                   
+                    <label>
+                        ♈ ♊ ♋ ♎ ☿ ♃ ♄ ♆ ☉ 
+                    </label>
+                    <br />                                  
                     Move forward or back to the space that matches the astrological sign or planetary body.
                 </p>
                 <p>
-                    <ul>Fests:
-                        <li>Yule 🌲 ❄ </li>
-                        <li>Imbolc 🕯 🌱</li>
-                        <li>Ostara 🥚 &#128007;</li>
-                        <li>Beltane 🍃</li>
-                        <li>Litha 🌻</li>
-                        <li>Lughnasadh 🌽 </li>
-                        <li>Mabon 🍂</li>
-                        <li>Samhain 🎃 </li>
-                    </ul>
+                    <label>
+                        🌲 🕯 🌽 🎃
+                    </label>   
+                    <br />                 
                     Move forward to the begining of the festival or backward to the end of the festival. 
+                </p>
+                <p>
+                    <label>
+                        Winning:
+                    </label>
+                    <br />
+                    The game ends when a player crosses the new moon during yule.
+                    Any moon phase may be used.
+                    The player with the greatest impact score wins.
                 </p>
             </div>
         )
