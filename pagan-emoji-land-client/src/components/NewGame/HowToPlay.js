@@ -67,9 +67,9 @@ export default class HowToPlay extends Component {
                         Winning:
                     </label>
                     <br />
-                    The game ends when a player crosses the new moon during yule.
+                    The game ends when a player crosses the new moon during Yule.
                     Any moon phase may be used.
-                    The player with the greatest impact score wins.
+                    The player with the greatest Impact Score wins.
                 </p>
             </div>
         )
