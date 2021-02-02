@@ -3,11 +3,19 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import manageGame from './reducers/manageGame'
+import { Provider } from 'react-redux';
+import { createStore } from 'redux'
+
+const store = createStore(manageGame,
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  
+    <Provider store={store}>
+      <App />
+    </Provider>
+  ,
   document.getElementById('root')
 );
 
