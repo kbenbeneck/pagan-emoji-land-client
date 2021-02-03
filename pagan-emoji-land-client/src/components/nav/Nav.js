@@ -37,7 +37,7 @@ export default class Nav extends Component {
                     IMPACT SCORES
                 </button>
                 
-                { this.state.choicesVisable ? <ChoosePlayer /> : null }
+                { this.state.choicesVisable ? <ChoosePlayer/> : null }
                 { this.state.howVisable ? <HowToPlay /> : null }
                 { this.state.scoresVisable ? <ScoresContainer /> : null }
 
