@@ -1,11 +1,11 @@
 import './App.css';
-import Nav from './components/nav/Nav'
+import GameContainer from './containers/GameContainer';
 
 function App() {
   return (
     <div className="App">
       
-      <Nav />
+      <GameContainer />
     </div>
   );
 }
