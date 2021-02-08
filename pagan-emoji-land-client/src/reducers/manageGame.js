@@ -1,9 +1,11 @@
+
+
 export default function manageGame(state = {
     playerOne: '', 
-    board: []
+    
 }, action) {
     switch (action.type) {
-        case 'ADD_PLAYER':
+        case 'CHOOSE_PLAYER':
             
             return {
                 ...state,
