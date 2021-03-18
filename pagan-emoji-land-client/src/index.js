@@ -3,12 +3,10 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import manageGame from './reducers/manageGame'
 import { Provider } from 'react-redux';
-import { createStore } from 'redux'
+import configureStore from './configureStore'
 
-const store = createStore(manageGame,
-  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())
+const store = configureStore()
 
 ReactDOM.render(
   
