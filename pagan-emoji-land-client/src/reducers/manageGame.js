@@ -17,7 +17,7 @@ export default function manageGame(state = {
     loading: false,
     elementName: '',
     winning: [],
-    gameOver: false
+    games: []
     
 }, action) {
     switch (action.type) {
@@ -87,12 +87,25 @@ export default function manageGame(state = {
                     pTwoCurrentPosition: 0,
                     pThreeCurrentPosition: 0,
                     pFourCurrentPosition: 0,
-                    loading: false,
+                    loading: true,
                     elementName: '',
                     winning: [],
-                    gameOver: false
+                    games: [...state.games]
                     
                 
+            }
+            
+        case 'LOADING_GAME_STATS':
+            return {
+                ...state,
+                games: [...state.games],
+                loading: true
+            }
+        case 'ADD_STATS': 
+            return {
+                ...state,
+                games: action.games,
+                loading: false
             }
         default:
             return state;

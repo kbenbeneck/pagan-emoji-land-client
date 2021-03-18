@@ -4,7 +4,7 @@ export default class HowToPlay extends Component {
     render() {
         return (
             <div className="how-to-play">
-                <hr />
+              
                 How To Play!
 
                 <p>
@@ -21,9 +21,9 @@ export default class HowToPlay extends Component {
                     <br />
                     Impact is left when a player lands on any board space and remains until another element lands on that space. 
                     <br />
-                    🪨   🪨   🪨   🜃
+                    🌱  🌱  🌱  🜃
                     💧  💧  💧  🜄
-                    🌀  🌀  🌀  🜁
+                    🌪  🌪  🌪  🜁
                     🔥  🔥  🔥  🜂
                 </p>
                 <p>
@@ -31,7 +31,7 @@ export default class HowToPlay extends Component {
                         Moving:
                     </label>
                     <br />
-                    Click  <button>𖤐 Summon 𖤐</button> to reach into the macrocosm and reveal a celestial body or seasonal event.
+                    Click  <button>𖤐</button> to reach into the macrocosm and reveal a celestial body or seasonal event.
                 </p>
                 <p>
                     <label>
@@ -55,19 +55,13 @@ export default class HowToPlay extends Component {
                     <br />                                  
                     Move forward or back to the space that matches the astrological sign or planetary body.
                 </p>
-                <p>
-                    <label>
-                        🌲 🕯 🌽 🎃
-                    </label>   
-                    <br />                 
-                    Move forward to the begining of the festival or backward to the end of the festival. 
-                </p>
+                
                 <p>
                     <label>
                         Winning:
                     </label>
                     <br />
-                    The game ends when a player crosses the new moon during Yule.
+                    The game ends when a player crosses the new moon at space 96 and the game is not tied..
                     Any moon phase may be used.
                     The player with the greatest Impact Score wins.
                 </p>

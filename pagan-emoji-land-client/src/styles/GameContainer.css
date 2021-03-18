@@ -103,4 +103,16 @@ body{
 .confirm-player {
     text-shadow: rgb(190, 39, 236) 0px -3px 3px;
 }
-.how-to-play { grid-area: right;}
+.how-to-play { grid-area: main;
+    transform: translate(0%, 25%);}
+
+.api-container {
+    grid-area: main;
+    transform: scale(.75) translate(0%, 100%);
+    
+}
+
+nav {
+    position: absolute;
+    transform: translate(0%, -60%);
+}

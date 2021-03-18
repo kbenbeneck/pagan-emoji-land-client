@@ -11,6 +11,8 @@ import { getImpactSym } from '../components/impact/getImpactSym'
 import { positions } from '../components/gameboard/positions'
 import countImpact from '../components/impact/countImpact'
 import tie from '../components/impact/tie'
+import createGame from '../components/API/createGame'
+import { fetchGames } from '../components/API/fetchGames'
 
 
 class SpacesContainer extends Component {
@@ -284,6 +286,14 @@ class SpacesContainer extends Component {
             
             if ((this.props.winning.length === 1) && (this.props.winning.includes(this.props.p1Impact))) {
                 alert(`Player One Wins by leaving ${p1Impact} impact while moving to ${this.state.pOneMoves}`)
+                let obj = {
+                    name: elementName,
+                    element: playerOne,
+                    impact: p1Impact,
+                    moves: this.state.pOneMoves.toString()
+                }
+                createGame(obj)
+                fetchGames()
                 this.setState({
                     summoned: 
                         <button
