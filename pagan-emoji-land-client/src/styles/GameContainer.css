@@ -1,0 +1,106 @@
+body{
+    padding: 50px 50px;
+}
+.game-container {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-areas: 
+    ' nav '
+    ' scores '
+    ' main '
+    'footer ';
+    grid-template-rows: 3% 7% 85% 5%;
+   
+    
+    
+    
+    
+
+    
+}
+.scores-container { 
+    height: 6%;
+    grid-area: scores;
+    width: 100%;
+    position: absolute;
+    left: 50%;
+}
+
+.scores {
+    text-align: center;
+    
+    display: grid;
+    grid-template-columns: repeat(4, 25vw);
+    grid-template-rows: 7vw;
+    transform: translate(-50%, 0%) rotate(0deg) rotateZ(0deg);
+    z-index: -3;
+}
+.spaces-container { 
+    grid-area: main;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%); 
+}
+.spaces{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(33, 1.5vw);
+    grid-template-rows: repeat(33, 1.5vw);
+    grid-row-gap: 5px;
+    grid-column-gap: 5px;
+    transform: rotateX(55deg) rotateZ(45deg);
+    align-items: center;
+    justify-items: center;
+}
+.player-choices { 
+    grid-area: main;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+}
+.player-choices > form {
+    display: grid;
+    grid-template-columns: repeat(3, 14vw);
+    grid-template-rows: repeat(3, 14vw);
+    row-gap: .7vw;
+    column-gap: .7vw;
+    transform:  rotate(45deg) rotateZ(0deg);
+}
+.player-choices > form > button {
+    align-items: center;
+    justify-items: center;
+    font-size: 10vw;
+}
+.player-choices > form > p {
+    grid-column: 3;
+    grid-row: 3;
+    font-size: 3.5vw;
+    white-space: nowrap;
+    transform: rotate(-45deg) translate(-90%, 100%);
+}
+.play-button{
+    grid-column: 2;
+    grid-row: 2;
+    transform: rotate(-75deg) skew(30deg) scaleY(.86);
+    overflow: hidden;
+}
+.play-button span{
+    margin: 0;
+    display: inline-block;
+    transform: rotate(45deg);
+    align-items: center;
+    justify-items: center;
+    
+}
+
+.play-button span:nth-child(2){
+    z-index: -1;
+    transform: rotate(45deg) translate(-85%, -85%);
+}
+
+.confirm-player {
+    text-shadow: rgb(190, 39, 236) 0px -3px 3px;
+}
+.how-to-play { grid-area: right;}
