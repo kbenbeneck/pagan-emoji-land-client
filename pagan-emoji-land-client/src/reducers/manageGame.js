@@ -17,8 +17,9 @@ export default function manageGame(state = {
     loading: false,
     elementName: '',
     winning: [],
-    games: []
-    
+    games: [],
+    searchResults: []
+     
 }, action) {
     switch (action.type) {
         case 'CHOOSE_PLAYERS':
@@ -69,7 +70,7 @@ export default function manageGame(state = {
                 p2Impact: action.payload.p2impact,
                 p3Impact: action.payload.p3impact,
                 p4Impact: action.payload.p4impact,
-                winning: action.payload.winning
+                winning: action.payload.winning  
             }
 
         case 'END_GAME':
@@ -92,6 +93,7 @@ export default function manageGame(state = {
                     winning: [],
                     games: [...state.games]
                     
+                    
                 
             }
             
@@ -105,7 +107,16 @@ export default function manageGame(state = {
             return {
                 ...state,
                 games: action.games,
+                searchResults: action.games,
                 loading: false
+            }
+
+        case 'SEARCH':
+            return {
+                ...state,
+                searchResults: state.games.filter(g => {
+                    return g.name.toLowerCase().includes(action.payload)
+                })
             }
         default:
             return state;
