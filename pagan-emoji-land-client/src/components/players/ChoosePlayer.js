@@ -64,7 +64,7 @@ class ChoosePlayer extends Component {
 
     handleOnSubmit(event) {
         event.preventDefault();
-        this.props.dispatch({ type: 'CHOOSE_PLAYERS', payload: this.state })
+        this.props.choosePlayers(this.state)
         this.setState({
             playerOne: '', 
             playerTwo: '',       
@@ -111,5 +111,11 @@ class ChoosePlayer extends Component {
         )
     }
 }
-
-export default connect()(ChoosePlayer);
+const mapDispatchToProps = dispatch => {
+    return {
+        choosePlayers: playersState => dispatch({
+            type: 'CHOOSE_PLAYERS', payload: playersState
+        })
+    }
+}
+export default connect(null, mapDispatchToProps)(ChoosePlayer);
