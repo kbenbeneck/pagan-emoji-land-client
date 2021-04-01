@@ -10,14 +10,16 @@ export default class GamesList extends Component {
                 moves: {g.moves}
             </li>)
     }
+
     render() {
         return (
             <ul className="game-stats">
-                {
-                    (this.props.game !== [])
-                    ?this.mappedGames()
-                    : null
-                }
+              
+           
+                
+                 {this.mappedGames()}
+                 
+              
                 
             </ul>
         )
