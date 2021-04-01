@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { connect } from 'react-redux'
+
 import { getImpactSym } from './getImpactSym';
 
 
@@ -45,4 +45,4 @@ import { getImpactSym } from './getImpactSym';
 }
 
 
-export default connect()(Scores)
+export default Scores
