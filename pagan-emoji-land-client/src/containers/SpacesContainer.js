@@ -11,8 +11,8 @@ import { getImpactSym } from '../components/impact/getImpactSym'
 import { positions } from '../components/gameboard/positions'
 import countImpact from '../components/impact/countImpact'
 import tie from '../components/impact/tie'
-import createGame from '../components/API/createGame'
-import { fetchGames } from '../components/API/fetchGames'
+import createGame from '../actions/createGame'
+import { fetchGames } from '../actions/fetchGames'
 
 
 class SpacesContainer extends Component {
@@ -218,12 +218,7 @@ class SpacesContainer extends Component {
                 pOneMoves: [this.state.pOneMoves, p1Summoned],
                 discarded: [this.state.discarded, p1Summoned],    
             })
-            
-            
-                
-             
 
-            
             function movep1() {
                 return new Promise(function(resolve, reject){
                     if (p1Selected) {resolve(rmv1(), state1(), hops1())}
@@ -236,45 +231,36 @@ class SpacesContainer extends Component {
             
             
 
-            let p4prom = () => {
-                return new Promise(function(resolve, reject) {
-                    resolve(movep4(), imp4(), impactCount(), dispCount())
-                })
+            async function p4prom() {
+                await Promise.all([
+                    movep4(), imp4(), impactCount(),dispCount()
+                ])  
             }
-            let p3prom = () => {
-                return new Promise(function(resolve, reject) {
-                    resolve(movep3(), imp3(), impactCount(), dispCount())
-                })
+            async function p3prom() {
+                await Promise.all([
+                    movep3(), imp3(), impactCount(),dispCount()
+                ])  
             }
-            let p2prom = () => {
-                return new Promise(function(resolve, reject) {
-                    resolve(movep2(), imp2(), impactCount(), dispCount())
-                })
+            async function p2prom() {
+                await Promise.all([
+                    movep2(), imp2(), impactCount(),dispCount()
+                ])  
             }
-            let p1prom = () => {
-                return new Promise(function(resolve, reject) {
-                    resolve(movep1(), imp1(), impactCount(), dispCount())
-                })
+            async function p1prom() {
+                await Promise.all([
+                    movep1(), imp1(), impactCount(),dispCount()
+                ])  
             }
-          
-            
-            let moves = () => {
-                setTimeout(() => {
-                    p4prom()
-                    setTimeout(() => {
-                        p3prom()
-                        setTimeout(() => {
-                            p2prom()
-                            setTimeout(() => {
-                                p1prom()
-                                
-                            }, 500)
-                        }, 500)
-                    }, 500)
-                }, 50)
-            }
-            
+
+           
+            async function moves() {
+                await p4prom()
+                setTimeout(await p3prom(), 1000)
+                setTimeout(await p2prom(), 1500)
+                setTimeout(await p1prom(), 2000)
+            } 
             moves()
+            
         }
          this.handleOnEndClick = event => {
                 event.preventDefault()  
