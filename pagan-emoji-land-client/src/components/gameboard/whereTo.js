@@ -2,7 +2,7 @@
 // use current position for pt.A
 // case moon  itterate arrays to get closest moon, moving forward only
 // case signs move to exact index
-
+ 
 export function whereTo(selection, pointA) {
     function findBMoons(element) {
         return element > pointA

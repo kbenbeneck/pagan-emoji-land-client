@@ -11,29 +11,15 @@ import {position} from './positions'
 let arr = [...Array(97).keys()]
 
 
-
-export function hops(a, b) {
-    // (a > b) 
-    // ? hopBack 
-    
-    // : hopForward
-    
+ 
+export function hops(a, b) { 
     let hopForward = arr.filter(function(num) {
         return (num >= a && num <= b)
-        
-        // return (num > a && num <= b)
-    
     })
     let hopBack = arr.filter(function(num) {
-       return (num <= a && num >= b)
-        
-        
+       return (num <= a && num >= b) 
     })
-
-    return ( a <= b ) ? hopForward : hopBack.reverse()
-    
-
-    
+    return ( a <= b ) ? hopForward : hopBack.reverse()  
 }
 
 
