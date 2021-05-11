@@ -252,13 +252,36 @@ class SpacesContainer extends Component {
                 ])  
             }
 
-           
-            async function moves() {
-                await p4prom()
-                setTimeout(await p3prom(), 1000)
-                setTimeout(await p2prom(), 1500)
-                setTimeout(await p1prom(), 2000)
-            } 
+           const movesTimeout = (cb, timeout = 0) => new Promise(resolve => {
+               setTimeout(
+                   () => {
+                       cb()
+                       resolve()
+                   }, timeout
+               )
+           })
+           const moves = async () => {
+               await movesTimeout(() => {
+                   p4prom()
+               });
+               
+               await movesTimeout(() => {
+                   p3prom()
+               }, 500);
+               await movesTimeout(() => {
+                   p2prom()
+               }, 500);
+               await movesTimeout(() => {
+                   p1prom()
+               }, 500);
+
+           }
+            // async function moves() {
+            //     await p4prom()
+            //     .then(setTimeout(p3prom(), 1000))
+            //     .then(setTimeout(p2prom(), 1500))
+            //     .then(setTimeout(p1prom(), 2000))
+            // } 
             moves()
             
         }
