@@ -3,20 +3,24 @@ import React, { Component } from 'react'
 export default class HowToPlay extends Component {
     render() {
         return (
-            <div className="how-to-play">
+            <div className="how-to-play" style={{textAlign: "center"}}>
               
-                How To Play!
+                <h2><strong>How To Play!</strong></h2>
 
                 <p>
                     <label>
-                        Object:
+                        <strong>
+                            Object:
+                        </strong>
                     </label>
                     <br />
                     Leave the most impact before passing the New Moon during the Winter Solstice.
                 </p>
                 <p>
                     <label>
+                        <strong>
                         Leaving Impact:
+                        </strong>
                     </label>
                     <br />
                     Impact is left when a player lands on any board space and remains until another element lands on that space. 
@@ -28,13 +32,15 @@ export default class HowToPlay extends Component {
                 </p>
                 <p>
                     <label>
+                        <strong>
                         Moving:
+                        </strong>
                     </label>
                     <br />
                     Click  <button>𖤐</button> to reach into the macrocosm and reveal a celestial body or seasonal event.
                 </p>
                 <p>
-                    <label>
+                    <label >
                         &#127761;
                         &#127762;
                         &#127763;
@@ -58,7 +64,9 @@ export default class HowToPlay extends Component {
                 
                 <p>
                     <label>
+                    <strong>
                         Winning:
+                        </strong>
                     </label>
                     <br />
                     The game ends when a player crosses the new moon at space 96 and the game is not tied..
