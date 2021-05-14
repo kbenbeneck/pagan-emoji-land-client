@@ -1,16 +1,17 @@
 # Pagan Emoji Land
 A gaming application where the object is to leave the most impact on an astral path made up entirely of emojis. 
-
+![img](public/howToPlay.png)
 Players (classical elements: 🜂,🜃,🜄,🜁), take turns drawing or summoing from a pool of symbols and then moving to the matching board space. 
     For example, summoning a 🌕 would move one's player to the next closest full moon, moving clockwise around the path. 
 Once a player lands on a space, they leave an impact symbal, increasing their score by 1. 
     For example, fire (🜂) would leave a flame emoji (🔥) on top of that space, lasting until another player lands there.
+![img](public/choosePlayer.png)
 If an astrological sign (♋) or planetary body (♃) is summoned, the player moves directly to the matching board space.
-
+![img](public/Play.png)
 When a player crosses the last space (circumnavagates the map) the player with the most impact symbols on the board wins. 
-
+![img](public/winning.png)
 If tie-game, the game continues until another player completes a revolution or summons are exhausted. 
-
+![img](public/tied.png)
 When the game is won by the user, the symbol, score, and moves list will persist in the scores api. The scores are visible via the /games route or by clicking the Scores button on the nav bar. 
 
 # Installation and Setup Instructions
